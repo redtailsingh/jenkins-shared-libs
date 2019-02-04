@@ -3,7 +3,7 @@
 *   and does not respect neither profile nor login shell config files.
 *   As a result I didn't find a way to inject RVM to Jenkins Pipeline sh command
 */
-withRvm(String version, String gemset, Closure cl) {
+def withRvm(String version, String gemset, Closure cl) {
     // First we have to amend the `PATH`.
     final RVM_HOME = '$HOME/.rvm'
     paths = [
